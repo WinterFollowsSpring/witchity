@@ -22,12 +22,26 @@
             background:rgb(122, 3, 122);
             transition: 250ms all ease; /* background-color 250ms ease, transform .1s; */
         }
+
+        .icon-expandable {
+            transition: 250ms all ease;
+            transform: scale(1);
+        }
+
+        .icon-expandable:hover {
+            transform: scale(1.1);
+            filter: brightness(150%);
+        }
+
+        .no-sad-button:focus {
+            background:rgb(122, 3, 122) !important;
+        }
     </style>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-secondary-subtle shadow">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand icon-expandable" href="/">
                 <img src="/res/triangles.svg" alt="Witchity" width="48" height="32">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -52,9 +66,9 @@
 
     <!-- Content -->
     <div class="container-lg mt-4">
-        <h1 class="text-center" style="color:purple;">Witchity</h1>
+        <h1 class="text-center" style="color:purple;user-select: none;">Witchity</h1>
         <div class="d-flex justify-content-center mt-5">
-            <a role="button" class="btn btn-dark expandable" href="/projects.html">Projects</a>
+            <a role="button" class="btn btn-dark expandable no-sad-button" href="/projects.html">Projects</a>
         </div>
     </div>
 </body>

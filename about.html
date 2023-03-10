@@ -10,10 +10,22 @@
 </head>
 
 <body>
+    <style>
+        .icon-expandable {
+            transition: 250ms all ease;
+            transform: scale(1);
+        }
+
+        .icon-expandable:hover {
+            transform: scale(1.1);
+            filter: brightness(150%);
+        }
+    </style>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-secondary-subtle shadow">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand icon-expandable" href="/">
                 <img src="/res/triangles.svg" alt="Witchity" width="48" height="32">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
